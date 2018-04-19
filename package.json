@@ -2,7 +2,7 @@
     "name": "jawaskrip-syntax-highlighting",
     "displayName": "jawaskrip syntax highlighting",
     "description": "jawaskrip syntax highlighting for vscode",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "indmind",
     "engines": {
         "vscode": "^1.22.0"

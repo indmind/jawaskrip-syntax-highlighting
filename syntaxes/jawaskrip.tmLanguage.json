@@ -162,7 +162,7 @@
 			}]
 		},
 		{
-			"match": "\\b(?<![\\.\\$])(jika|jikaTidak|untuk|ulangi|selama|setop|lewati|break|by|catch|continue|else|finally|for|in|of|if|return|switch|then|throw|try|unless|when|while|until|loop|do|export|import|default|from|as|yield|async|await|(?<=for)\\s+own)(?!\\s*:)\\b",
+			"match": "\\b(?<![\\.\\$])(jika|jikaTidak|untuk|ulangi|selama|setop|lewati|kembalikan|break|by|catch|continue|else|finally|for|in|of|if|return|switch|then|throw|try|unless|when|while|until|loop|do|export|import|default|from|as|yield|async|await|(?<=for)\\s+own)(?!\\s*:)\\b",
 			"name": "keyword.control.jawaskrip"
 		},
 		{
@@ -521,7 +521,7 @@
 				},
 				{
 					"begin": "(?=(@|@?[\\w$]+|[=-]>|\\-\\d|\\[|{|\"|'))",
-					"end": "(?=\\s*(?<![\\w$])(kurangDari|kurangdari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))|(?=\\s*(}|\\]|\\)|#|$))",
+					"end": "(?=\\s*(?<![\\w$])(ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))|(?=\\s*(}|\\]|\\)|#|$))",
 					"name": "meta.arguments.jawaskrip",
 					"patterns": [{
 						"include": "$self"
@@ -579,7 +579,7 @@
 					}]
 				},
 				{
-					"begin": "(?x)\n(@)?([\\w$]+)\n\\s*\n(?=\\s+(?!(?<![\\w$])(kurangDari|kurangdari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))(?=(@?[\\w$]+|[=-]>|\\-\\d|\\[|{|\"|')))",
+					"begin": "(?x)\n(@)?([\\w$]+)\n\\s*\n(?=\\s+(?!(?<![\\w$])(ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))(?=(@?[\\w$]+|[=-]>|\\-\\d|\\[|{|\"|')))",
 					"beginCaptures": {
 						"1": {
 							"name": "variable.other.readwrite.instance.jawaskrip"
@@ -590,7 +590,7 @@
 							}]
 						}
 					},
-					"end": "(?=\\s*(?<![\\w$])(kurangDari|kurangdari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))|(?=\\s*(}|\\]|\\)|#|$))",
+					"end": "(?=\\s*(?<![\\w$])(ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))|(?=\\s*(}|\\]|\\)|#|$))",
 					"name": "meta.function-call.jawaskrip",
 					"patterns": [{
 						"include": "#arguments"
@@ -711,7 +711,7 @@
 					}]
 				},
 				{
-					"begin": "(?:(\\.)|(::))\\s*([\\w$]+)\\s*(?=\\s+(?!(?<![\\w$])(kurangDari|kurangdari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))(?=(@|@?[\\w$]+|[=-]>|\\-\\d|\\[|{|\"|')))",
+					"begin": "(?:(\\.)|(::))\\s*([\\w$]+)\\s*(?=\\s+(?!(?<![\\w$])(ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))(?=(@|@?[\\w$]+|[=-]>|\\-\\d|\\[|{|\"|')))",
 					"beginCaptures": {
 						"1": {
 							"name": "punctuation.separator.method.period.jawaskrip"
@@ -725,7 +725,7 @@
 							}]
 						}
 					},
-					"end": "(?=\\s*(?<![\\w$])(kurangDari|kurangdari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))|(?=\\s*(}|\\]|\\)|#|$))",
+					"end": "(?=\\s*(?<![\\w$])(ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))|(?=\\s*(}|\\]|\\)|#|$))",
 					"name": "meta.method-call.jawaskrip",
 					"patterns": [{
 						"include": "#arguments"
