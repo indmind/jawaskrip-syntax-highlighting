@@ -1,0 +1,26 @@
+{
+    "name": "jawaskrip-syntax-highlighting",
+    "displayName": "jawaskrip syntax highlighting",
+    "description": "jawaskrip syntax highlighting for vscode",
+    "version": "0.0.1",
+    "publisher": "indmind",
+    "engines": {
+        "vscode": "^1.22.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "jawaskrip",
+            "aliases": ["jawaskrip", "jawaskrip"],
+            "extensions": [".jw",".jawaskrip",".jawa"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "jawaskrip",
+            "scopeName": "source.jw",
+            "path": "./syntaxes/jawaskrip.tmLanguage.json"
+        }]
+    }
+}
