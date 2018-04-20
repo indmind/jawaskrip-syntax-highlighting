@@ -3,7 +3,7 @@
 	"name": "jawaskrip",
 	"scopeName": "source.jw",
 	"patterns": [{
-			"match": "(new|buat)\\s+(?:(?:(class)\\s+(\\w+(?:\\.\\w*)*)?)|(\\w+(?:\\.\\w*)*))",
+			"match": "(new|buat)\\s+(?:(?:(class|kelas)\\s+(\\w+(?:\\.\\w*)*)?)|(\\w+(?:\\.\\w*)*))",
 			"name": "meta.class.instance.constructor.jawaskrip",
 			"captures": {
 				"1": {
@@ -162,7 +162,7 @@
 			}]
 		},
 		{
-			"match": "\\b(?<![\\.\\$])(jika|jikaTidak|untuk|ulangi|selama|setop|lewati|kembalikan|break|by|catch|continue|else|finally|for|in|of|if|return|switch|then|throw|try|unless|when|while|until|loop|do|lakukan|export|import|default|from|as|yield|async|await|(?<=for)\\s+own)(?!\\s*:)\\b",
+			"match": "\\b(?<![\\.\\$])(setiap|jika|jikaTidak|untuk|ulangi|selama|setop|lewati|kembalikan|break|by|catch|continue|else|finally|for|in|of|if|return|switch|then|throw|try|unless|when|while|until|loop|do|lakukan|export|import|default|from|as|yield|async|await|(?<=for)\\s+own)(?!\\s*:)\\b",
 			"name": "keyword.control.jawaskrip"
 		},
 		{
@@ -311,11 +311,11 @@
 			"name": "constant.language.null.jawaskrip"
 		},
 		{
-			"match": "\\b(?<!\\.|::)extends(?!\\s*[:=])\\b",
+			"match": "\\b(?<!\\.|::)(extends|turunan)(?!\\s*[:=])\\b",
 			"name": "variable.language.jawaskrip"
 		},
 		{
-			"match": "(?<!\\.)\\b(?<!\\$)(super|this|arguments)(?!\\s*[:=][^=]|\\$)\\b",
+			"match": "(?<!\\.)\\b(?<!\\$)(ini|super|this|arguments)(?!\\s*[:=][^=]|\\$)\\b",
 			"name": "variable.language.$1.jawaskrip"
 		},
 		{
@@ -330,7 +330,7 @@
 					"name": "entity.other.inherited-class.jawaskrip"
 				}
 			},
-			"match": "(?<=\\s|^|\\[|\\()(class)\\s+(extends)\\s+(@?[a-zA-Z\\$\\._][\\w\\.]*)",
+			"match": "(?<=\\s|^|\\[|\\()(class|kelas)\\s+(extends|turunan)\\s+(@?[a-zA-Z\\$\\._][\\w\\.]*)",
 			"name": "meta.class.jawaskrip"
 		},
 		{
@@ -348,7 +348,7 @@
 					"name": "entity.other.inherited-class.jawaskrip"
 				}
 			},
-			"match": "(?<=\\s|^|\\[|\\()(class\\b)\\s+(@?[a-zA-Z\\$_][\\w\\.]*)?(?:\\s+(extends)\\s+(@?[a-zA-Z\\$\\._][\\w\\.]*))?",
+			"match": "(?<=\\s|^|\\[|\\()((class|kelas)\\b)\\s+(@?[a-zA-Z\\$_][\\w\\.]*)?(?:\\s+(extends|turunan)\\s+(@?[a-zA-Z\\$\\._][\\w\\.]*))?",
 			"name": "meta.class.jawaskrip"
 		},
 		{
@@ -356,11 +356,11 @@
 			"name": "keyword.other.jawaskrip"
 		},
 		{
-			"match": "\\b(Array|ArrayBuffer|Blob|Boolean|Date|document|Function|Int(8|16|32|64)Array|Math|Map|Number|Object|Proxy|RegExp|Set|String|WeakMap|window|Uint(8|16|32|64)Array|XMLHttpRequest)\\b",
+			"match": "\\b(Teks|Angka|Array|ArrayBuffer|Blob|Boolean|Date|document|Function|Int(8|16|32|64)Array|Math|Map|Number|Object|Proxy|RegExp|Set|String|WeakMap|window|Uint(8|16|32|64)Array|XMLHttpRequest)\\b",
 			"name": "support.class.jawaskrip"
 		},
 		{
-			"match": "\\b(console)\\b",
+			"match": "\\b(console|tulis|masukan)\\b",
 			"name": "entity.name.type.object.jawaskrip"
 		},
 		{
@@ -521,7 +521,7 @@
 				},
 				{
 					"begin": "(?=(@|@?[\\w$]+|[=-]>|\\-\\d|\\[|{|\"|'))",
-					"end": "(?=\\s*(?<![\\w$])(ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))|(?=\\s*(}|\\]|\\)|#|$))",
+					"end": "(?=\\s*(?<![\\w$])(sebanyak|sebagai|ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebihdari|samaDengan|samadengan|adalah|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))|(?=\\s*(}|\\]|\\)|#|$))",
 					"name": "meta.arguments.jawaskrip",
 					"patterns": [{
 						"include": "$self"
@@ -579,7 +579,7 @@
 					}]
 				},
 				{
-					"begin": "(?x)\n(@)?([\\w$]+)\n\\s*\n(?=\\s+(?!(?<![\\w$])(ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))(?=(@?[\\w$]+|[=-]>|\\-\\d|\\[|{|\"|')))",
+					"begin": "(?x)\n(@)?([\\w$]+)\n\\s*\n(?=\\s+(?!(?<![\\w$])(sebanyak|sebagai|ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebihdari|samaDengan|samadengan|adalah|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))(?=(@?[\\w$]+|[=-]>|\\-\\d|\\[|{|\"|')))",
 					"beginCaptures": {
 						"1": {
 							"name": "variable.other.readwrite.instance.jawaskrip"
@@ -590,7 +590,7 @@
 							}]
 						}
 					},
-					"end": "(?=\\s*(?<![\\w$])(ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))|(?=\\s*(}|\\]|\\)|#|$))",
+					"end": "(?=\\s*(?<![\\w$])(sebanyak|sebagai|ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebihdari|samaDengan|samadengan|adalah|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))|(?=\\s*(}|\\]|\\)|#|$))",
 					"name": "meta.function-call.jawaskrip",
 					"patterns": [{
 						"include": "#arguments"
@@ -711,7 +711,7 @@
 					}]
 				},
 				{
-					"begin": "(?:(\\.)|(::))\\s*([\\w$]+)\\s*(?=\\s+(?!(?<![\\w$])(ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))(?=(@|@?[\\w$]+|[=-]>|\\-\\d|\\[|{|\"|')))",
+					"begin": "(?:(\\.)|(::))\\s*([\\w$]+)\\s*(?=\\s+(?!(?<![\\w$])(sebanyak|sebagai|ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebihdari|samaDengan|samadengan|adalah|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))(?=(@|@?[\\w$]+|[=-]>|\\-\\d|\\[|{|\"|')))",
 					"beginCaptures": {
 						"1": {
 							"name": "punctuation.separator.method.period.jawaskrip"
@@ -725,7 +725,7 @@
 							}]
 						}
 					},
-					"end": "(?=\\s*(?<![\\w$])(ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebuhdari|samaDengan|samadengan|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))|(?=\\s*(}|\\]|\\)|#|$))",
+					"end": "(?=\\s*(?<![\\w$])(sebanyak|sebagai|ditambah|dikurangi|dikali|dibagi|modulo|kurangDari|lebihDari|lebihdari|samaDengan|samadengan|adalah|dan|tidak|atau|of|in|then|is|isnt|and|or|for|else|when|if|unless|by|instanceof)(?![\\w$]))|(?=\\s*(}|\\]|\\)|#|$))",
 					"name": "meta.method-call.jawaskrip",
 					"patterns": [{
 						"include": "#arguments"

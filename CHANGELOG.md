@@ -17,3 +17,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Added
 - set lakukan as keyword
 - add .jwsl extension
+
+## [0.0.4] - 2018-4-20
+### Added
+- kelas
+- setiap
+- ini
+- turunan
+- tulis
+- masukan
+- Teks
+- Angka
+- sebanyak
+- sebagai
+- adalah
