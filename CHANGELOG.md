@@ -36,3 +36,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 ### Added
 - impor
 - dari
+
+
+## [0.0.6] - 2018-5-10
+### Added
+- tunggu
