@@ -3,9 +3,6 @@ All notable changes to the "jawaskrip-syntax-highlighting" extension will be doc
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 
-## [Unreleased]
-- Initial release
-
 ## [0.0.1] - 2018-4-19
 - Initial release
 
@@ -37,7 +34,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 - impor
 - dari
 
-
 ## [0.0.6] - 2018-5-10
 ### Added
 - tunggu
+
+## [0.0.7] - 2018-5-12
+### Added
+- lain
+- kurangdari
+### Removed
+- jikaTidak
